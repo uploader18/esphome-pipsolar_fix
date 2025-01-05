@@ -406,7 +406,16 @@ void Pipsolar::loop() {
         }
         this->state_ = STATE_IDLE;
         break;
-      case POLLING_P007PGS0:
+      case POLLING_P007PGS1:
+        if (this->ac_output_active_power_par1_) {
+          this->total_ac_output_apparent_power_->publish_state(value_total_ac_output_apparent_power_);
+        }
+        if (this->battery_charging_current1_) {
+          this->total_ac_output_apparent_power_->publish_state(value_total_ac_output_apparent_power_);
+        }
+        if (this->pv1_input_power1_) {
+          this->total_ac_output_apparent_power_->publish_state(value_total_ac_output_apparent_power_);
+        }
         if (this->total_ac_output_apparent_power_) {
           this->total_ac_output_apparent_power_->publish_state(value_total_ac_output_apparent_power_);
         }
@@ -550,8 +559,8 @@ void Pipsolar::loop() {
         sscanf(tmp, "^D%3d%08d", &ind, &value_total_generated_energy_);
         this->state_ = STATE_POLL_DECODED;
         break;
-      case POLLING_P007PGS0:
-        ESP_LOGD(TAG, "Decode P007PGS0");
+      case POLLING_P007PGS1:
+        ESP_LOGD(TAG, "Decode P007PGS1");
         //"^D1131,3,00,2384,500,2301,500,1287,1286,02621,02600,022,023,522,025,000,000,080,0027,0000,1200,0000,2,0,1,2,2,0,048D\xDF\r"
         sscanf(tmp,  // 1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29
                "^D%3d%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d", &ind,
@@ -564,18 +573,19 @@ void Pipsolar::loop() {
                //                                &value_one_ac_output_voltage_, // 6 FFFF
                //                                &value_one_ac_output_frequency_, // 7 GGG
                //                                &value_one_ac_output_apparent_power_, //8 HHHH
-               //                                &value_one_ac_output_active_power_, //9 IIII
+               &value_one_ac_output_active_power_par1_, //9 IIII
                &value_total_ac_output_apparent_power_,  // 10 JJJJJ
                &value_total_ac_output_active_power_,    // 11 KKKKK
                &ind,                                    // &value_one_output_load_percent_, //12 LLL
                &value_total_output_load_percent_,       // 13 MMM
                &ind,                                    // &value_one_battery_voltage_, //14 NNN
                &ind,                                    // &value_one_battery_discharge_current_, //15 OOO
-               &ind,                                    // &value_one_battery_charging_current_, //16 PPP
+               &ind,                                    
+               &value_one_battery_charging_current_par_1, //16 PPP
                &value_total_battery_charging_current_,  // 17 QQQ
                &ind, &ind, &ind, &ind, &ind, &ind, &ind, &ind, &ind, &ind, &ind, &ind
                //                                &value_one_battery_capacity_, //18 MMM
-               //                                &value_one_pv1_input_power_, //19 RRRR
+               &value_one_pv1_input_power_par1_, //19 RRRR
                //                                &value_one_pv2_input_power_, //20 SSSS
                //                                &value_one_pv1_input_voltage_, //21 TTTT
                //                                &value_one_pv2_input_voltage_, // 22 UUUU
