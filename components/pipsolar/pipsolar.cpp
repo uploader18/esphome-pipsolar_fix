@@ -408,13 +408,13 @@ void Pipsolar::loop() {
         break;
       case POLLING_P007PGS1:
         if (this->ac_output_active_power_par1_) {
-          this->total_ac_output_apparent_power_->publish_state(value_total_ac_output_apparent_power_);
+          this->ac_output_active_power_par1_->publish_state(ac_output_active_power_par1_);
         }
         if (this->battery_charging_current1_) {
-          this->total_ac_output_apparent_power_->publish_state(value_total_ac_output_apparent_power_);
+          this->battery_charging_current1_->publish_state(battery_charging_current1_);
         }
-        if (this->pv1_input_power1_) {
-          this->total_ac_output_apparent_power_->publish_state(value_total_ac_output_apparent_power_);
+        if (this->pv1_input_power_par1_) {
+          this->pv1_input_power_par1_->publish_state(pv1_input_power_par1_);
         }
         if (this->total_ac_output_apparent_power_) {
           this->total_ac_output_apparent_power_->publish_state(value_total_ac_output_apparent_power_);
