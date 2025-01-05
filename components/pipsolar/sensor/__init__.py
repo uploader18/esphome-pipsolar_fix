@@ -313,10 +313,25 @@ TYPES = {
         device_class=DEVICE_CLASS_POWER,
     ),
     # for all in parallel
+    CONF_AC_OUTPUT_ACTIVE_POWER_PAR1: sensor.sensor_schema(
+        unit_of_measurement=UNIT_WATT,
+        accuracy_decimals=0,
+        device_class=DEVICE_CLASS_POWER,
+    ),
     CONF_TOTAL_AC_OUTPUT_APPARENT_POWER: sensor.sensor_schema(
         unit_of_measurement=UNIT_VOLT_AMPS,
         accuracy_decimals=0,
     ),
+    CONF_BATTERY_CHARGING_CURRENT_PAR1: sensor.sensor_schema(
+        unit_of_measurement=UNIT_AMPERE,
+        accuracy_decimals=0,
+        device_class=DEVICE_CLASS_CURRENT,
+    ),
+    CONF_PV1_INPUT_POWER_PAR1: sensor.sensor_schema(
+        unit_of_measurement=UNIT_WATT,
+        accuracy_decimals=0,
+        device_class=DEVICE_CLASS_POWER,
+    ),    
     CONF_TOTAL_AC_OUTPUT_ACTIVE_POWER: sensor.sensor_schema(
         unit_of_measurement=UNIT_WATT,
         accuracy_decimals=0,
@@ -330,21 +345,6 @@ TYPES = {
         unit_of_measurement=UNIT_AMPERE,
         accuracy_decimals=0,
         device_class=DEVICE_CLASS_CURRENT,
-    ),
-    CONF_BATTERY_CHARGING_CURRENT_PAR1: sensor.sensor_schema(
-        unit_of_measurement=UNIT_AMPERE,
-        accuracy_decimals=0,
-        device_class=DEVICE_CLASS_CURRENT,
-    ),
-    CONF_AC_OUTPUT_ACTIVE_POWER_PAR1: sensor.sensor_schema(
-        unit_of_measurement=UNIT_WATT,
-        accuracy_decimals=0,
-        device_class=DEVICE_CLASS_POWER,
-    ),
-    CONF_PV1_INPUT_POWER_PAR1: sensor.sensor_schema(
-        unit_of_measurement=UNIT_WATT,
-        accuracy_decimals=0,
-        device_class=DEVICE_CLASS_POWER,
     ),
 }
 
