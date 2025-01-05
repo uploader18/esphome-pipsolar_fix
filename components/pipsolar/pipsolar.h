@@ -86,8 +86,8 @@ class Pipsolar : public uart::UARTDevice, public PollingComponent {
   PIPSOLAR_SENSOR(local_parallel_id, P005GS, int)                         // b
 
   PIPSOLAR_SENSOR(ac_output_active_power_par1, P007PGS1, int)
-  PIPSOLAR_SENSOR(battery_charging_current1, P007GS1, int)
-  PIPSOLAR_SENSOR(pv1_input_power1, P007GS1, float)
+  PIPSOLAR_SENSOR(battery_charging_current_par1, P007GS1, int)
+  PIPSOLAR_SENSOR(pv1_input_power_par1, P007GS1, float)
   PIPSOLAR_SENSOR(total_ac_output_apparent_power, P007PGS1, int)
   PIPSOLAR_SENSOR(total_ac_output_active_power, P007PGS1, int)
   PIPSOLAR_SENSOR(total_output_load_percent, P007PGS1, int)
