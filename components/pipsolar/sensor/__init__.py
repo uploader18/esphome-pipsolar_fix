@@ -78,6 +78,9 @@ CONF_LOCAL_PARALLEL_ID = "local_parallel_id"
 CONF_FAULT_CODE = "fault_code"
 CONF_TOTAL_GENERATED_ENERGY = "total_generated_energy"
 
+CONF_AC_OUTPUT_POWER_PAR1 = "ac_output_active_power_par1"
+CONF_BATTERY_CHARGING_CURRENT_PAR1 = "battery_charging_current_par1"
+CONF_PV1_INPUT_POWER_PAR1 = "pv1_input_power_par1"
 CONF_TOTAL_AC_OUTPUT_APPARENT_POWER = "total_ac_output_apparent_power"
 CONF_TOTAL_AC_OUTPUT_ACTIVE_POWER = "total_ac_output_active_power"
 CONF_TOTAL_OUTPUT_LOAD_PERCENT = "total_output_load_percent"
@@ -327,6 +330,21 @@ TYPES = {
         unit_of_measurement=UNIT_AMPERE,
         accuracy_decimals=0,
         device_class=DEVICE_CLASS_CURRENT,
+    ),
+    CONF_BATTERY_CHARGING_CURRENT_PAR1: sensor.sensor_schema(
+        unit_of_measurement=UNIT_AMPERE,
+        accuracy_decimals=0,
+        device_class=DEVICE_CLASS_CURRENT,
+    ),
+    CONF_AC_OUTPUT_ACTIVE_POWER_PAR1: sensor.sensor_schema(
+        unit_of_measurement=UNIT_WATT,
+        accuracy_decimals=0,
+        device_class=DEVICE_CLASS_POWER,
+    ),
+    CONF_PV1_INPUT_POWER_PAR1: sensor.sensor_schema(
+        unit_of_measurement=UNIT_WATT,
+        accuracy_decimals=0,
+        device_class=DEVICE_CLASS_POWER,
     ),
 }
 
