@@ -410,8 +410,8 @@ void Pipsolar::loop() {
         if (this->ac_output_active_power_par1_) {
           this->ac_output_active_power_par1_->publish_state(ac_output_active_power_par1_);
         }
-        if (this->battery_charging_current1_) {
-          this->battery_charging_current1_->publish_state(battery_charging_current1_);
+        if (this->battery_charging_current_par1_) {
+          this->battery_charging_current_par1_->publish_state(battery_charging_current_par1_);
         }
         if (this->pv1_input_power_par1_) {
           this->pv1_input_power_par1_->publish_state(pv1_input_power_par1_);
