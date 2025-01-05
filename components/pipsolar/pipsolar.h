@@ -19,7 +19,7 @@ enum ENUMPollingCommand {
   POLLING_P005FWS = 4,
   //            POLLING_QT = 5,
   //            POLLING_QMN = 6,
-  POLLING_P007PGS0 = 10,
+  POLLING_P007PGS1 = 10,
   POLLING_P005ET = 30,
 };
 
@@ -85,10 +85,13 @@ class Pipsolar : public uart::UARTDevice, public PollingComponent {
   PIPSOLAR_SENSOR(line_power_direction, P005GS, int)                      // a
   PIPSOLAR_SENSOR(local_parallel_id, P005GS, int)                         // b
 
-  PIPSOLAR_SENSOR(total_ac_output_apparent_power, P007PGS0, int)
-  PIPSOLAR_SENSOR(total_ac_output_active_power, P007PGS0, int)
-  PIPSOLAR_SENSOR(total_output_load_percent, P007PGS0, int)
-  PIPSOLAR_SENSOR(total_battery_charging_current, P007PGS0, int)
+  PIPSOLAR_SENSOR(ac_output_active_power_par1, P007PGS1, int)
+  PIPSOLAR_SENSOR(battery_charging_current1, P007GS1, int)
+  PIPSOLAR_SENSOR(pv1_input_power1, P007GS1, float)
+  PIPSOLAR_SENSOR(total_ac_output_apparent_power, P007PGS1, int)
+  PIPSOLAR_SENSOR(total_ac_output_active_power, P007PGS1, int)
+  PIPSOLAR_SENSOR(total_output_load_percent, P007PGS1, int)
+  PIPSOLAR_SENSOR(total_battery_charging_current, P007PGS1, int)
 
   // P007PIRI values
   PIPSOLAR_SENSOR(grid_rating_voltage, P007PIRI, float)
