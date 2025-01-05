@@ -78,7 +78,7 @@ CONF_LOCAL_PARALLEL_ID = "local_parallel_id"
 CONF_FAULT_CODE = "fault_code"
 CONF_TOTAL_GENERATED_ENERGY = "total_generated_energy"
 
-CONF_AC_OUTPUT_POWER_PAR1 = "ac_output_active_power_par1"
+CONF_AC_OUTPUT_ACTIVE_POWER_PAR1 = "ac_output_active_power_par1"
 CONF_BATTERY_CHARGING_CURRENT_PAR1 = "battery_charging_current_par1"
 CONF_PV1_INPUT_POWER_PAR1 = "pv1_input_power_par1"
 CONF_TOTAL_AC_OUTPUT_APPARENT_POWER = "total_ac_output_apparent_power"
