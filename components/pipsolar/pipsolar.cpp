@@ -563,7 +563,7 @@ void Pipsolar::loop() {
         ESP_LOGD(TAG, "Decode P007PGS1");
         //"^D1131,3,00,2384,500,2301,500,1287,1286,02621,02600,022,023,522,025,000,000,080,0027,0000,1200,0000,2,0,1,2,2,0,048D\xDF\r"
         sscanf(tmp,  // 1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29
-               "^D%3d%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%f,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d", &ind,
+               "^D%3d%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%f,%d,%d,%d,%d,%d,%d,%d,%d,%d,%f", &ind,
                &ind, &ind, &ind, &ind, &ind, &ind, &ind,
                //                                &value_one_parallel_id_connection_status_, //1 A
                //                                &value_one_work_mode_, //2 B
