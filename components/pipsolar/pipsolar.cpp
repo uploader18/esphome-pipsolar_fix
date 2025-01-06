@@ -573,7 +573,7 @@ void Pipsolar::loop() {
                //                                &value_one_ac_output_voltage_, // 6 FFFF
                //                                &value_one_ac_output_frequency_, // 7 GGG
                //                                &value_one_ac_output_apparent_power_, //8 HHHH
-               &value_one_ac_output_active_power_par1_, //9 IIII
+               &value_ac_output_active_power_par1_, //9 IIII
                &value_total_ac_output_apparent_power_,  // 10 JJJJJ
                &value_total_ac_output_active_power_,    // 11 KKKKK
                &ind,                                    // &value_one_output_load_percent_, //12 LLL
@@ -581,11 +581,11 @@ void Pipsolar::loop() {
                &ind,                                    // &value_one_battery_voltage_, //14 NNN
                &ind,                                    // &value_one_battery_discharge_current_, //15 OOO
                &ind,                                    
-               &value_one_battery_charging_current_par_1, //16 PPP
+               &value_battery_charging_current_par_1, //16 PPP
                &value_total_battery_charging_current_,  // 17 QQQ
                &ind, &ind, &ind, &ind, &ind, &ind, &ind, &ind, &ind, &ind, &ind
                //                                &value_one_battery_capacity_, //18 MMM
-               &value_one_pv1_input_power_par1_, //19 RRRR
+               &value_pv1_input_power_par1_, //19 RRRR
                &ind, &ind, &ind, &ind, &ind, &ind, &ind, &ind, &ind, &ind
                //                                &value_one_pv2_input_power_, //20 SSSS
                //                                &value_one_pv1_input_voltage_, //21 TTTT
