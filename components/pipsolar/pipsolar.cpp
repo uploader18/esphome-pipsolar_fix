@@ -581,7 +581,7 @@ void Pipsolar::loop() {
                &ind,                                    // &value_one_battery_voltage_, //14 NNN
                &ind,                                    // &value_one_battery_discharge_current_, //15 OOO
                &ind,                                    
-               &value_battery_charging_current_par_1, //16 PPP
+               &value_battery_charging_current_par1_, //16 PPP
                &value_total_battery_charging_current_,  // 17 QQQ
                &ind,                                     // &value_one_battery_capacity_, //18 MM
                &value_pv1_input_power_par1_, //19 RRRR
